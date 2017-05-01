@@ -1,0 +1,67 @@
+//kolory
+$color1: #000000;
+$color2: #4a007c;
+$color3: #b20084;
+$color4: #949494;
+$color5: #ffffff;
+
+//fonty
+$familylight: 'fontlight';
+$familyregular: 'fontregular';
+$familybold: 'fontbold';
+
+//rozmiary tytulow
+$sizebig: 3rem;
+$sizemedium: 2rem;
+$sizesmall: 1.5rem;
+
+//rozmiary tekstu
+$sizetextbig: 1.5rem; 
+$sizetextmedium: 1rem; 
+$sizetextsmall: 0.8rem; 
+
+//btn
+$btnsize: 1rem;
+$radius: 1.5rem; 
+
+//gradient
+@mixin gradient(){
+    background-image: -moz-linear-gradient( 16deg, rgb(73,0,124) 0%, rgb(231,0,136) 100%);
+    background-image: -webkit-linear-gradient( 16deg, rgb(73,0,124) 0%, rgb(231,0,136) 100%);
+    background-image: -ms-linear-gradient( 16deg, rgb(73,0,124) 0%, rgb(231,0,136) 100%);
+    background-image: linear-gradient( 16deg, rgb(73,0,124) 0%, rgb(231,0,136) 100%);
+}
+
+//owl
+$item-caption-bg: rgba(0,0,0,0.8);
+
+//animacje
+@keyframes slide-top{
+    from{top: 100%;}
+    to{top: 0;}
+}
+
+@keyframes slide-bottom{
+    from{top: 0;}
+    to{top: 100%;}
+}
+.rc-slide-top{
+    animation: slide-top 0.5s;
+    top: 0!important;
+}
+
+.rc-slide-bottom{
+    animation: slide-bottom 0.5s;
+    top: 100%;
+}
+
+
+@keyframes opacity-top{
+    from{background: transparent;}
+    to{@include gradient();}
+}
+
+@keyframes opacity-bottom{
+    from{opacity: 1;}
+    to{opacity: 0;}
+}

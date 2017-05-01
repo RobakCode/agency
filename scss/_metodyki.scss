@@ -1,0 +1,173 @@
+a{display: inline-block;
+    &:hover{text-decoration: none;}}
+
+img{max-width: 100%; height: auto;}
+
+//menu
+.rc-menu{
+    list-style-type: none; 
+    display: inline-block; 
+    
+    li{
+        display: inline-block;
+        position: relative;
+        
+        a{
+            position: relative;
+            padding: 5px 10px; 
+            margin: 0 5px;
+            border-radius: $radius;
+            transition: all 0.3s;
+            
+            &:hover{
+                transition: all 0.3s;
+                @include gradient();
+                color: $color5;
+            }
+            
+            @media screen and (max-width: 756px){
+                font-size: 1rem;
+            }
+        }
+        
+        &.current-menu-item a{
+            border: 1px solid $color4;
+            
+            &:hover{
+                border-color: $color5;;
+            }
+        }
+    }
+}
+
+.rc-menu-mobile{
+    display: none;
+    background-color: rgba(255,255,255,0.8);
+    padding: 0.5rem 0;
+    margin-top: 10px;
+    
+    li{
+        display: block;
+        
+        &:hover{
+            a{
+                color: $color3;
+            }
+        }
+        
+        a{
+            padding: 0.2rem 0;
+            color: $color1;
+        }
+    }
+}
+
+//parallax
+.rc-parallax{
+    @include gradient(); 
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed; 
+    background-repeat: no-repeat;
+}
+
+//paddingi
+.rc-ptb-1{padding-top: 0.1rem; padding-bottom: 0.1rem;}
+.rc-ptb-5{padding-top: 0.5rem; padding-bottom: 0.5rem;}
+.rc-ptb-10{padding-top: 1rem; padding-bottom: 1rem;}
+.rc-ptb-20{padding-top: 2rem; padding-bottom: 2rem;}
+.rc-ptb-30{padding-top: 3rem; padding-bottom: 3rem;}
+.rc-ptb-40{padding-top: 4rem; padding-bottom: 4rem;}
+.rc-ptb-50{padding-top: 5rem; padding-bottom: 5rem;}
+.rc-ptb-100{padding-top: 10rem; padding-bottom: 10rem;}
+
+//marginesy
+.rc-mtb-1{margin-top: 0.1rem; margin-bottom: 0.1rem;}
+.rc-mtb-5{margin-top: 0.5rem; margin-bottom: 0.5rem;}
+.rc-mtb-10{margin-top: 1rem; margin-bottom: 1rem;}
+.rc-mtb-20{margin-top: 2rem; margin-bottom: 2rem;}
+.rc-mtb-30{margin-top: 3rem; margin-bottom: 3rem;}
+.rc-mtb-40{margin-top: 4rem; margin-bottom: 4rem;}
+.rc-mtb-50{margin-top: 5rem; margin-bottom: 5rem;}
+.rc-mtb-100{margin-top: 10rem; margin-bottom: 10rem;}
+
+//tytuly
+.rc-title-big{font-size: $sizebig; font-family: $familybold;    
+    small{font-size: $sizebig; font-family: $familylight;}}
+.rc-title-medium{font-size: $sizemedium; font-family: $familybold;    
+    small{font-size: $sizemedium; font-family: $familylight;}}
+.rc-title-small{font-size: $sizesmall; font-family: $familybold;    
+    small{font-size: $sizesmall; font-family: $familylight;}}
+
+@media screen and (max-width: 756px){
+    .rc-title-big{font-size: $sizemedium; small{font-size: $sizemedium;}}
+    .rc-title-medium{font-size: $sizesmall; small{font-size: $sizesmall;}}
+    .rc-title-small{font-size: $sizesmall; small{font-size: $sizesmall;}}
+}
+
+//text
+.rc-text-big{font-size: $sizetextbig; font-family: $familylight;}
+.rc-text-medium{font-size: $sizetextmedium; font-family: $familylight;}
+.rc-text-small{font-size: $sizetextsmall; font-family: $familylight;}
+
+@media screen and (max-width: 756px){
+    .rc-text-big{font-size: $sizetextmedium;}
+.rc-text-medium{font-size: $sizetextsmall;}
+.rc-text-small{font-size: $sizetextsmall;}
+}
+
+//kolory
+.f-color1{color: $color1;}
+.f-color2{color: $color2;}
+.f-color3{color: $color3;}
+.f-color4{color: $color4;}
+.f-color5{color: $color5;}
+
+//
+.rc-circle{border-radius: 50%;}
+.rc-center-y{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+//buttony
+.rc-btn-primary{
+    border-radius: 1.5rem; 
+    border: none;
+    color: $color5; 
+    cursor: pointer;
+    font-size: 1rem; 
+    font-family: $familylight; 
+    padding: 0.5rem 1rem; 
+    margin-top: 2rem; 
+    @include gradient();
+    
+    &:hover{
+        color: $color5;
+    }
+}
+
+//owl
+.item-slider{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+    .item-caption{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: $item-caption-bg;
+        top: 100%;
+        left: 0;
+        padding: 30px;
+        animation: slide-bottom 0.3s;
+    }
+    
+    &:hover .item-caption{
+        animation: slide-top 0.3s;
+        top: 0;
+    }
+}

@@ -1,0 +1,134 @@
+//header
+.rc-heder{
+    min-height: 100vh;
+    background-image: url(../img/header.jpg);
+}
+
+//logo
+.rc-logo{
+    font-family: $familylight;
+    
+    b{
+        font-family: $familybold; 
+    }
+    
+    @media screen and (max-width: 756px){
+        font-size: 1rem;
+    }
+}
+
+//menu
+.rc-top-menu{
+    margin-top: 15px;
+    
+    ul{
+        li{
+            a{
+                color: $color1;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 756px){
+    .rc-top-menu{
+        margin-top: 0;
+    }
+}
+
+.rc-toggle-menu{
+    @extend .rc-btn-primary;
+    margin: auto;
+    float: right;
+}
+
+//about us
+.rc-about{
+    background-image: url('../img/about.jpg');
+}
+
+//slider
+.rc-portfolio-slider{
+    position: relative;
+    
+    .btn-left,
+    .btn-right{
+        background-color: $color5;
+        color: $color1;
+        font-size: $sizesmall;
+        padding: 10px 20px 10px 15px;
+        cursor: pointer;
+        opacity: 0.1;
+        transition: 0.3s;
+        
+        &:hover{
+            opacity: 1;
+            transition: 0.3s;
+        }
+    }
+}
+
+//mapa
+.rc-mapa{
+    height: 50vh;
+    @media screen and (max-width: 756px){
+        height: 100vh;
+    }
+}
+
+//contact form
+.rc-contact-form{
+    position: fixed;
+    overflow: scroll;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+    top: 100%;
+    left: 0;
+    margin: 0;
+    padding: 10px;
+    background-color: rgba(255,255,255,0.95);
+    
+    .container{
+        position: static;
+    }
+    
+    .rc-close{
+        font-family: $familylight;
+        font-family: $sizebig;
+        padding: 10px;
+        border: 1px solid $color1;
+        cursor: pointer;
+        color: $color1;
+        position: absolute;
+        z-index: 21;
+        top: 10px;
+        right: 10px;
+    }
+    
+    .form{
+        .label{
+            display: block;
+            text-align: left;
+            text-transform: uppercase;
+            color: $color4;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        textarea{
+            width: 100%;
+            padding: 5px 10px;
+            border: 1px solid $color3;
+            color: $color4;
+        }
+        
+        input[type="submit"]{
+            @include gradient();
+            border-radius: $radius;
+            border: none;
+            color: $color5;
+            padding: 10px 25px;
+        }
+    }
+}

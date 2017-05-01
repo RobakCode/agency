@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projekty>
+    <projekt>
+        <picture alt="picture">img/s1.jpg</picture>
+        <title>Neptune template</title>
+        <excerpt>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam quae dolorum voluptatibus unde velit.</excerpt>
+    </projekt>
+    
+    <projekt>
+        <picture alt="picture">img/s2.jpg</picture>
+        <title>Neptune template</title>
+        <excerpt>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</excerpt>
+    </projekt>
+    
+    <projekt>
+        <picture alt="picture">img/s3.jpg</picture>
+        <title>Neptune template</title>
+        <excerpt>Quisquam quae dolorum voluptatibus unde velit, recusandae laudantium, numquam accusantium aut architecto.</excerpt>
+    </projekt>
+</projekty>
